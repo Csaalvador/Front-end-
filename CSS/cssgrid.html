@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssgrid</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: darkorchid;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 20vh 70vh 10vh;
+            grid-template-areas: "h h" "m a" "f f";
+        }
+
+        header {
+            background-color: dimgray;
+            grid-area: h;
+        
+        }
+
+        main {
+            background-color: palevioletred;
+                        grid-area: m;
+
+        
+        }
+
+        aside {
+            background-color: aliceblue;
+                        grid-area: a;
+
+         
+        }
+
+        footer {
+            background-color: aquamarine;
+                        grid-area: f;
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
