@@ -44,6 +44,9 @@ ul.onclick = function (event){
   if(event.target.classList.contains('delete')){
     if(confirm("Tem certeza?")){
     event.target.parentElement.remove()
+
+    let li = document.createElement(li)
+    this.appendChild(li)
   }
 }
 }
