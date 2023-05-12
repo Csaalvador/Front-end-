@@ -1,11 +1,33 @@
 const form = document.querySelector("form");
 const ul = document.querySelector("ul");
+const body = document.querySelector("body")
 
 form.onsubmit = function (event) {
   event.preventDefault();
 
   const input = form.querySelector("input");
   const value = input.value;
+
+
+  if (value == "") return alert("Não é possível listar um nome inexistente");
+
+  const li = ul.querySelector("li").cloneNode(true);
+  li.querySelector("span").textContent = value;
+  ul.appendChild(li);
+
+  input.value = "";
+};
+
+ul.onclick = function (event){
+  if(event.target.classList.contains('delete')){
+    if(confirm("Tem certeza?")){
+    event.target.parentElement.remove()
+
+    let li = document.createElement(li)
+    this.appendChild(li)
+  }
+}
+}
 
   ////////////////////////// PRIMEIRA MANEIRA /////////////////////////////
   /*
@@ -30,23 +52,3 @@ form.onsubmit = function (event) {
 */
 
   //////////////////////////////// MANEIRA MAIS SIMPLES////////////////////////:
-
-  if (value == "") return alert("Não é possível listar um nome inexistente");
-
-  const li = ul.querySelector("li").cloneNode(true);
-  li.querySelector("span").textContent = value;
-  ul.appendChild(li);
-
-  input.value = "";
-};
-
-ul.onclick = function (event){
-  if(event.target.classList.contains('delete')){
-    if(confirm("Tem certeza?")){
-    event.target.parentElement.remove()
-
-    let li = document.createElement(li)
-    this.appendChild(li)
-  }
-}
-}
