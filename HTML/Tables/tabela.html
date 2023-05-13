@@ -31,33 +31,47 @@
         tr:nth-child(even) {
             background-color: #fff;
         }
+
     </style>
 </head>
 
 <body>
     <!--Exemplo de tabelas-->
-    <table border="1">
+    <table border="1" tabindex="1">
+        <thead>
         <tr>
-            <th>Nome</th>
+            <th>Name</th>
             <th>Idade</th>
             <th>Sexo</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
-            <td>João</td>
-            <td>20</td>
+            <td tabindex="2">João</td>
+            <td rowspan="3">30</td>
+
+            
             <td>Masculino</td>
         </tr>
         <tr>
-            <td>Maria</td>
-            <td>25</td>
+            <td tabindex="3">Maria</td>
+            
             <td>Feminino</td>
         </tr>
         <tr>
-            <td>Joana</td>
-            <td>30</td>
+            <td tabindex="4">Joana</td>
             <td>Feminino</td>
         </tr>
+    </tbody>
+<tfoot>
+    <tr>
+        <td colspan="4" tabindex="5">Total de pessoas: 3</td>
+    </tr>
+</tfoot>
     </table>
+
+
+
 
 
 </body>
