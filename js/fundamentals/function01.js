@@ -13,4 +13,5 @@
 //result(4,2)
 
 const result = (a,b) => a - b
-console.log(result(8,2))
+console.log(result(8
+    ,2))
