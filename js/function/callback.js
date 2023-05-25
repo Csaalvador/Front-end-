@@ -1,7 +1,8 @@
-const carros = ['Mercedes', 'Civic', 'BMW' , 'Ferrari']
+const garagem = ['Golfão', 'Civic', 'BMW', 'AUDI']
 
-function imprimir(n,i){
-    console.log(`${i + 1} ${n}`)
+function imprimir(nome, indice){
+    console.log(`${indice} ${nome}`)
 }
-
-carros.forEach(imprimir)
+garagem.forEach(imprimir)
+console.log('\n')
+garagem.forEach((a,b) => console.log(b,a))
