@@ -11,7 +11,13 @@
         <h1>Exercícios HTML</h1>
     </header>
     <nav>
-        <a href="./Exercicios/teste.html">001 - Teste</a>
+        <a href wm-nav="./Exercicios/teste.html">001 - Teste ||</a>
+        <a href wm-nav="./Exercicios/texto1.html">002 - texto01 ||</a>
+        <a href wm-nav="./Exercicios/texto2.html">003 - texto02 ||</a>
+        <a href wm-nav="./Exercicios/listaAninhada.html">004 - listas ||</a>
+        <a href wm-nav="./Exercicios/links.html">005 - listas ||</a>
+        <a href wm-nav="./Exercicios/tables.html">006 - tables ||</a>
+
     </nav>
     <main id="content"></main>
     <footer>
@@ -19,8 +25,16 @@
     </footer>
 
     <script>
-        document.querySelectorALL('a').link.forEach(link => {
-            console.log(link)
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            link.onclick = function (e){
+                e.preventDefault()
+                console.log('Olá Mundo!')
+
+                const conteudo = document.getElementById('content')
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
         });
     </script>
 </body>

@@ -1,0 +1,67 @@
+<h1>Projeto</h1>
+
+<ul class="tree">
+    <li>
+        <span folder>backend</span>
+        <ul>
+            <li>
+                <span folder>app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>cliente.js</li>
+                    <li>vendas.js</li>
+                </ul>
+            </li>
+            <li>
+                <span folder>config</span>
+                <ul>
+                    <li>server.js</li>
+                    <li>routes.js</li>
+                </ul>
+            </li>
+            <li>
+                <span folder>db</span>
+                <ul>
+                    <li>banco.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span folder>frontend</span>
+        <ul>
+            <li>
+                <span folder>public</span>
+                <ul>
+                    <li>index.html</li>
+                    <li>
+                        <span folder>css</span>
+                        <ul>
+                            <li>style.css</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span folder>js</span>
+                        <ul>
+                            <li>main.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+
+    document.querySelectorAll('[folder]').forEach(folder => {
+        const ul = folder.nextElementSibling
+        
+        folder.onclick = function(e){
+          const ul = folder.nextElementSibling
+          const d = ul.style.display
+          ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
