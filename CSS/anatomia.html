@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+.selector{
+    color: #fff;
+    font-size: 20px;
+    border: solid 5px navy;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(34, 20, 189);
+    width: calc(100% - 40px);
+}
+
+/*PSEUDO CLASSE*/
+.selector:hover {
+    background-color: #dedede;
+}
+
+/*PSEUDO-ELEMENTOS*/
+.selector::first-letter {
+    color: aqua;
+    font-size: 60px;
+}
+    .selector::cue-region {
+        font-size: 60px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+     /*seletores avaçados*/
+        /*seletores de atributos
+        ul[feira] {
+            background-color: #ccc;
+        }
+
+        ul[feira="casa"] {
+            background-color: #f00;
+        }
+
+        ul[feira~="escritorio"] {
+            background-color: #0f0;
+        }
+
+        /*seletores de atributos*/
+        /*seletores de pseudo-classes
+        ol li:first-child {
+            background-color: #f00;
+        }
+
+        ol li:last-child {
+            background-color: #0f0;
+        }
+
+        ol li:nth-child(2) {
+            background-color: #00f;
+        }
+
+        ol li:nth-child(odd) {
+            background-color: #ccc;
+        }
+
+        ol li:nth-child(even) {
+            background-color: #999;
+        }
+
+        /*seletores de pseudo-classes*/
+        /*seletores de pseudo-elementos
+        p::first-line {
+            color: #f00;
+        }
+
+        p::first-letter {
+            color: #0f0;
+        }
+
+        p::before {
+            content: "Olá";
+            color: #00f;
+        }
+
+        p::after {
+            content: "Mundo";
+            color: #ccc;
+        }
+
+        /*seletores de pseudo-elementos*/
+        /*seletores de combinação*/
+        div p {
+            color: #f00;
+        }
+
+        div > p {
+            color: #0f0;
+        }
+
+        div + p {
+            color: rgb(255, 255, 255);
+        }
+
+        div ~ p {
+            color: #ccc;
+        }
+
+        /*seletores de combinação*/
+        /*seletores de agrupamento*/
+        div,
+        p {
+            color: #f00;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
