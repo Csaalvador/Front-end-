@@ -53,7 +53,7 @@
         border-radius: 5px;
         height: 40px;
         padding: 10px 20px;
-        margin: 20PX 15PX;
+        margin: 20px;
     }
 
     .cabecalho .menu {
@@ -62,17 +62,62 @@
         width: 30%;     
     }
     
-    .cabecalho .menu ul {
-        display: flex;
-        justify-content: space-around;
-        
+    .cabecalho .menu li {
+        display: inline-block;
+        margin-top: 1rem;
+    } 
+
+    .cabecalho .menu {
+        padding: .8rem;
+        word-spacing: 1rem;
+
+    }
+
+    .cabecalho .menu a:hover, a.active {
+        background-color: #4faddb;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: #eee;
+        } 
+
+        .autenticacao {
+            float: right;
+            height: 80px;
+            padding: 25px;
         }
 
+        .botao {
+            margin: 10px;
+            padding: 10px 25px;
+            border-radius: 30px;
+        }
 
-    
- 
+        .destaque {
+            background-color: crimson;
+        } 
 
-  
+        @media (max-width: 820px) {
+            .cabecalho .menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 570px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .cabecalho .menu-toggle {
+                display: none;
+            }
+        }
+     
     </style>
 </head>
 
@@ -92,13 +137,13 @@
                     <a href="#inicio">Início</a>
                 </li>
                 <li>
-                    <a href="#cursos">Cursos</a>
+                    <a href ="#cursos">Cursos</a>
                 </li>
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a href ="#sobre">Sobre</a>
                 </li>
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a href ="#contato">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -109,7 +154,18 @@
     </header>
 
     <script>
-        // ...
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+
+            const oldSection = document.querySelector(`.menu a[href="#${oldURL}"]`)
+            const newSection = document.querySelector(`.menu a[href="#${newURL}"]`)
+            oldSection.classList.remove('active')
+            newSection.classList.add('active')
+        }
+
+
+            
     </script>
 </body>
 
