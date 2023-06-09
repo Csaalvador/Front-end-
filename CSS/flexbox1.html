@@ -6,8 +6,33 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
-    </style>
+
+        div{
+            margin: 5px;
+            border: solid 5px dodgerblue;
+            font-size: 21px; 
+        }
+
+        .big{
+            font-size: 1.5em;
+            /* flex-grow: 4; */
+            /* flex-shrink: 1; */
+
+        }
+        
+        .flex-container {
+            display: flex;
+             width: 300px;
+            /* flex-flow: wrap; */
+            /* flex-flow: column-reverse wrap; */           
+        }
+
+        .tag:nth-child(5) {
+            display: flex;
+            color: aqua; flex-shrink: 5;}
+
+
+</style>
 </head>
 
 <body>

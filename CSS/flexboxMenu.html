@@ -16,14 +16,17 @@
             background: #333;
             color: #fff;
             border-bottom: solid 5px #4faddb;
+            width: 100%;
             height: 80px;
         }
         
         .logo img {
+            display: flex;
             height: 50px;
         }
         
         .menu ul {
+ 
             list-style: none;
             margin: 0;
             padding: 0;
@@ -34,6 +37,7 @@
             color: #eee;
             font-size: 1.3em;
             padding: 10px 15px;
+
         }
         
         .menu a:hover {
@@ -54,6 +58,25 @@
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .menu {
+            flex-grow: 1;
+        }
+
+        .menu ul {
+            display: flex;
+        }
+
+        aside {
+            display: flex;
+        }
+   
     </style>
 </head>
 

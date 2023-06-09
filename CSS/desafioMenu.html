@@ -160,8 +160,8 @@
 
             const oldSection = document.querySelector(`.menu a[href="#${oldURL}"]`)
             const newSection = document.querySelector(`.menu a[href="#${newURL}"]`)
-            oldSection.classList.remove('active')
-            newSection.classList.add('active')
+            oldSection && oldSection.classList.remove('active')
+            newSection && newSection.classList.add('active')
         }
 
 

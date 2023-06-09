@@ -6,7 +6,29 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            margin: 5px;
+            border: solid 5px dodgerblue;
+            font-size: 21px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container div {
+            width: 200px;
+        }
+
+        .tag:nth-child(2) {
+            flex: 1 2 100px;
+            background: red;
+        }
     </style>
 </head>
 
