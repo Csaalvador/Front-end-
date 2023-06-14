@@ -1,0 +1,25 @@
+.tag {
+    margin: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.tag:nth-child(1) {
+    border: 5px solid #cf2323;
+}
+
+.tag:nth-child(2) {
+    border: 5px solid #3bce1a;
+}
+
+.tag:nth-child(3) {
+    border: 5px solid #1a8ece;
+}
+
+.tag:nth-child(4) {
+    border: 5px solid #ce9b1a;
+}
+
+

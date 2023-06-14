@@ -20,6 +20,23 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: [a] 1fr [b] 1fr [c] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+
+
+    /*row-start / row-end / column-start / column-end*/
+    .d1 {
+        grid-column: b / fim;
+        grid-row: 1 / span 2;
+        grid-area: 1/ b / span 3 / fim;
+    }
+
+
     </style>
 </head>
 

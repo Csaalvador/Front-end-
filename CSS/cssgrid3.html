@@ -4,25 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Grid #03</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="./css/tag.css">
 </head>
 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: grid;
+        height: 99
+        vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 200px 1fr ;
+        grid-template-areas:
+        'header header nav'
+        'main main nav'
+        'footer footer footer';
+    }
+
+    main {
+        grid-area: main;
+        background-color: red;
+    }
+
+    header {
+        grid-area: header;
+        background-color: green;
+
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: blue;
+
+    }
+
+    nav { 
+        grid-area: nav;
+        background-color: rgb(123, 91, 91);
+
+    }
+
+    @media(max-width: 600px){
+        body {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            'header header'
+            'main nav'
+            'main nav'
+            'footer nav';
+        }
+    }
+
+    @media(max-width: 300px){
+        body {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            'header'
+            'nav'
+            'main'
+            'footer';
+        }
+    }
+</style>
+
 <body>
-    <style contenteditable style="display: block; white-space: 3;">
-    html {
-        background: #cece;
-    }
-    div {
-        height: 100px;
-        width: 100px;
-        background: red;
-    }
-    </style>
-
-    <div>
-
-    </div>
-
+<main class="tag">MAIN</main>
+<header class="tag">HEADER</header>
+<footer class="tag">FOOTER</footer>
+<nav class="tag">NAVEGAÇÃO</nav>
 
     <script src="js/tag.js"></script>
 </body>
