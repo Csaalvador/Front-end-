@@ -10,7 +10,22 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+        document.querySelector('#primeiro').classList.add('destaque')
+
+         const selecionar = seleciona => {
+            document.querySelectorAll(seleciona).forEach(e => e.classList.add('destaque'))
+         }
+
+         const remover = remove => {
+            document.querySelectorAll(remove).forEach(e => e.classList.remove('destaque'))
+         }
+
+         selecionar('div')
+         remover('div')
+
+         selecionar(':not(.terceiro)')
+
+
     </script>
 </body>
 </html>

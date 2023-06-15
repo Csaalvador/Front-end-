@@ -12,7 +12,17 @@
         Classes
     </div>
     <script>
-        // ...
+        const classes = document.querySelector('div').classList
+
+        classes.toggle('destaque')
+       classes.add('destaque')
+       classes.add('destaque')
+       classes.add('destaque')
+
+        
+        for(let c of classes) {
+            console.log(c)
+        }
     </script>
 </body>
 

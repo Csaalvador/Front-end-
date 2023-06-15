@@ -15,8 +15,16 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
-    </script>
+        const img = document.querySelector('img')
+
+        console.log('alt', img.alt)
+
+        const link = document.querySelector('a')
+
+        link.firstChild.nodeValue = 'Beatriz'
+        link.innerHTML = 'Beatriz&Cauã'
+    
+</script>
 </body>
 
 </html>
