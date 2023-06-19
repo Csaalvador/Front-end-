@@ -9,7 +9,31 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const destaque = d => {
+            d.classList.add('destaque')
+        }
+
+        const aplc = a => {
+            body.appendChild(a)
+        }
+
+        const div1 = document.createElement('div')
+        destaque(div1)
+        div1.innerHTML = 'Cauã'
+        aplc(div1)
+
+        const div2 = document.createElement('div')
+        destaque(div2)
+        div2.innerHTML = 'Beatriz'
+        aplc(div2)
+
+        const div3 = document.createElement('div')
+        destaque(div3)
+        div3.innerHTML = 'Casamento'
+        aplc(div3)
+
     </script>
 </body>
 
