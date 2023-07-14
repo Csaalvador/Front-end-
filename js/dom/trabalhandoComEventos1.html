@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <title>Trabalhando com Eventos #01</title>
-    <link rel='stylesheet' href='css/estilo.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
-<body class="conteudo exercicio">
-    <div>
-        <a href="https://google.com.br">Google</a>
-    </div>
+<body>
     <script>
-        // ...
-    </script>
+        espera = (e) => {
+            e.preventDefault()
+            
+            setTimeout(() => {
+                window.location.href = e.target.href
+            },5000)
+        }
+
+        const a = document.querySelector('[aguarde]')
+        
+        a.onclick = espera
+        </script>
+
 </body>
+</html>
